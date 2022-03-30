@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+A mobile app that allows user to form and find dining group in local restaurants based on their foodie interests
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
