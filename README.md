@@ -15,12 +15,12 @@ A mobile app that allows user to form and find dining group in local restaurants
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking/ Food
+- **Mobile:** This app would be primarily developed for mobile but might have a corresponding website in the future. Its functionality and design framework are not limited by mobile platform
+- **Story:** User can customize their food interests and preference, form dining group when going to a restaurant, or find an existing dining group in nearby restaurants
+- **Market:** Any individual choosing to use the app who has an interest in sharing dining experiences with others, and is dedicated to maintaining a comfortable and friendly environment for other users
+- **Habit:** This app can be an integrated part of people's lives and builds the culture of shared dining and eating networking
+- **Scope:** The app will start to connect people to others in the same region or between a few people, but it will not be limited to a contemporary arrangement. The app can facilitate friendship and communication after the experience 
 
 ## Product Spec
 
