@@ -63,8 +63,8 @@ A mobile app that allows user to form and find dining group in local restaurants
    * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="Screen Shot 2022-03-30 at 2.25.59 PM.png" width=600>
+
+<img src="Screen Shot 2022-03-30 at 2.25.59 PM.png" width=600 title='Wireframes'>
 
 ### [BONUS] Digital Wireframes & Mockups
 
