@@ -69,7 +69,9 @@ A mobile app that allows user to form and find dining group in local restaurants
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
+
 Here's a walkthrough of planned user stories:
+
 <img src='https://media.giphy.com/media/nE3Dle7rM7LSXTPqGG/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Schema 
