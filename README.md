@@ -28,13 +28,18 @@ A mobile app that allows user to form and find dining group in local restaurants
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Register an account
+* Stay logged in
+* Select cuisine interests
+* Create a dinning group
+* Join a dinning group
+* Rate a restaurant
+* Locate nearby dinning group on map
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Chat with people from previous dinning group
+* Add people to friend list
 
 ### 2. Screen Archetypes
 
