@@ -1,13 +1,13 @@
 //
-//  bonchowUITestsLaunchTests.swift
-//  bonchowUITests
+//  BonchowUITestsLaunchTests.swift
+//  BonchowUITests
 //
-//  Created by Yvonne511 on 2022/3/26.
+//  Created by Anagh Kanungo on 02/04/22.
 //
 
 import XCTest
 
-class bonchowUITestsLaunchTests: XCTestCase {
+class BonchowUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

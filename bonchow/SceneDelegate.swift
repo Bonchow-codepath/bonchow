@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  bonchow
+//  Bonchow
 //
-//  Created by Yvonne511 on 2022/3/26.
+//  Created by Anagh Kanungo on 02/04/22.
 //
 
 import UIKit

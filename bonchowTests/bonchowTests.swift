@@ -1,14 +1,14 @@
 //
-//  bonchowTests.swift
-//  bonchowTests
+//  BonchowTests.swift
+//  BonchowTests
 //
-//  Created by Yvonne511 on 2022/3/26.
+//  Created by Anagh Kanungo on 02/04/22.
 //
 
 import XCTest
-@testable import bonchow
+@testable import Bonchow
 
-class bonchowTests: XCTestCase {
+class BonchowTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

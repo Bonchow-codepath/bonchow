@@ -1,11 +1,13 @@
 //
 //  AppDelegate.swift
-//  bonchow
+//  Bonchow
 //
-//  Created by Yvonne511 on 2022/3/26.
+//  Created by Anagh Kanungo on 02/04/22.
 //
 
 import UIKit
+import GoogleMaps
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyAWWfBAK0VzgeQ_met2EY-SfTUZvXejwRI")
+        
         return true
     }
 
