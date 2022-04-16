@@ -100,7 +100,7 @@
         <!--Register-->
         <scene sceneID="3Wv-s8-T4a">
             <objects>
-                <viewController id="ZtD-pM-Syb" customClass="RegisterViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZtD-pM-Syb" customClass="RegisterViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AcB-Rf-UXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@ than recovering your account. Your information is secure and not shared with any
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onGetStarted:" destination="cIf-nH-Y8j" eventType="touchUpInside" id="Qhn-uN-fyS"/>
-                                    <segue destination="Lo2-74-p4b" kind="show" id="4zY-0q-yxa"/>
+                                    <action selector="onRegister:" destination="ZtD-pM-Syb" eventType="touchUpInside" id="AcX-Ef-XFg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,54 +192,21 @@ than recovering your account. Your information is secure and not shared with any
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="ZjB-de-0Z3"/>
+                    <connections>
+                        <outlet property="emailField" destination="Cf2-n1-YWm" id="tpV-sf-kik"/>
+                        <outlet property="nameField" destination="uhV-Cy-OCk" id="gKn-RS-o3v"/>
+                        <outlet property="passwordField" destination="gtp-sf-1tY" id="bQE-ct-Gh9"/>
+                        <segue destination="0Ze-vC-Hgj" kind="presentation" identifier="registerSegue" id="GpZ-Ko-0Is"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km6-1X-kB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2602.898550724638" y="69.642857142857139"/>
         </scene>
-        <!--Food Preferences-->
-        <scene sceneID="hFy-Rq-QNI">
-            <objects>
-                <viewController id="Lo2-74-p4b" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NXh-pb-VnB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-N9-MdE">
-                                <rect key="frame" x="20" y="716" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IYp-ts-vED"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                    <color key="baseBackgroundColor" red="0.99607843139999996" green="0.46666666670000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="onGetStarted:" destination="cIf-nH-Y8j" eventType="touchUpInside" id="ofC-Vo-ORt"/>
-                                    <segue destination="0Ze-vC-Hgj" kind="show" id="EOh-0m-8pQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="EW1-T7-qz8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EW1-T7-qz8" firstAttribute="trailing" secondItem="C1A-N9-MdE" secondAttribute="trailing" constant="20" id="0PP-n2-esv"/>
-                            <constraint firstItem="C1A-N9-MdE" firstAttribute="leading" secondItem="EW1-T7-qz8" secondAttribute="leading" constant="20" id="1h0-ot-0oK"/>
-                            <constraint firstItem="C1A-N9-MdE" firstAttribute="top" secondItem="EW1-T7-qz8" secondAttribute="top" constant="628" id="BSL-dZ-NAH"/>
-                            <constraint firstItem="EW1-T7-qz8" firstAttribute="bottom" secondItem="C1A-N9-MdE" secondAttribute="bottom" constant="96" id="pOp-OU-CVN"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Food Preferences" id="N8B-Ac-02B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Peg-CS-5sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3469.5652173913045" y="69.642857142857139"/>
-        </scene>
         <!--Map View Controller-->
         <scene sceneID="zuG-l2-yaX">
             <objects>
-                <viewController id="0Ze-vC-Hgj" customClass="MapViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0Ze-vC-Hgj" customClass="MapViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOc-4W-GiQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +240,7 @@ than recovering your account. Your information is secure and not shared with any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4297" y="70"/>
+            <point key="canvasLocation" x="3371" y="70"/>
         </scene>
         <!--Login-->
         <scene sceneID="aPJ-MT-lAe">
@@ -286,6 +253,9 @@ than recovering your account. Your information is secure and not shared with any
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="yqT-Xp-LeM"/>
+                    <connections>
+                        <segue destination="0Ze-vC-Hgj" kind="presentation" identifier="loginSegue" id="cHH-ct-eU2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCR-VZ-99I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,6 +280,9 @@ than recovering your account. Your information is secure and not shared with any
             <point key="canvasLocation" x="922" y="70"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cHH-ct-eU2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="1668" height="2224"/>
         <image name="logo" width="628" height="216"/>

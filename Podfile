@@ -6,6 +6,7 @@ target 'Bonchow' do
   use_frameworks!
 
   # Pods for Bonchow
+  pod 'Parse'
   pod "AlamofireImage"
   pod "GoogleMaps"
 

@@ -2,27 +2,37 @@ PODS:
   - Alamofire (5.5.0)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
+  - Bolts/Tasks (1.9.1)
   - GoogleMaps (6.1.1):
     - GoogleMaps/Maps (= 6.1.1)
   - GoogleMaps/Base (6.1.1)
   - GoogleMaps/Maps (6.1.1):
     - GoogleMaps/Base
+  - Parse (1.19.3):
+    - Parse/Core (= 1.19.3)
+  - Parse/Core (1.19.3):
+    - Bolts/Tasks (= 1.9.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - GoogleMaps
+  - Parse
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - Bolts
     - GoogleMaps
+    - Parse
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   GoogleMaps: 94e6e0851beece6678af9f508f4918b7a7c61722
+  Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: e58f1f203e2071e6431d9eddac55681decb5f3de
+PODFILE CHECKSUM: 3ded894850a7e6f146c77ee755e7470e0e78393e
 
 COCOAPODS: 1.11.2
