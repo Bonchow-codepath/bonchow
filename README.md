@@ -1,7 +1,5 @@
-Original App Design Project - README Template
+BonChow - Find People to eat with
 ===
-
-# APP_NAME_HERE
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -14,7 +12,6 @@ Original App Design Project - README Template
 A mobile app that allows user to form and find dining group in local restaurants based on their foodie interests
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Social Networking/ Food
 - **Mobile:** This app would be primarily developed for mobile but might have a corresponding website in the future. Its functionality and design framework are not limited by mobile platform
 - **Story:** User can customize their food interests and preference, form dining group when going to a restaurant, or find an existing dining group in nearby restaurants
@@ -24,33 +21,22 @@ A mobile app that allows user to form and find dining group in local restaurants
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
-
 **Required Must-have Stories**
 
-* Register an account
-* Stay logged in
-* Select cuisine interests
-* Create a dinning group
-* Join a dinning group
-* Rate a restaurant
-* Locate nearby dinning group on map
+* [X] Register an account
+* [ ] Stay logged in
+* [ ] Select cuisine interests
+* [ ] Create a dinning group
+* [ ] Join a dining group
+* [ ] Rate a restaurant
+* [ ] Locate nearby dining group on map
 
 **Optional Nice-to-have Stories**
 
-* Chat with people from previous dinning group
+* Chat with people from previous dining group
 * Add people to friend list
 
-### 2. Screen Archetypes
-
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
-
-### 3. Navigation
+### Navigation
 
 **Tab Navigation** (Tab to Screen)
 
@@ -68,22 +54,7 @@ A mobile app that allows user to form and find dining group in local restaurants
    * ...
 
 ## Wireframes
-
 <img src="Screen Shot 2022-03-30 at 2.25.59 PM.png" width=600 title='Wireframes'>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 Here's a walkthrough of planned user stories:
-
 <img src='https://media.giphy.com/media/nE3Dle7rM7LSXTPqGG/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
