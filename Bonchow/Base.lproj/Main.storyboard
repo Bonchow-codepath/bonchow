@@ -196,7 +196,7 @@ than recovering your account. Your information is secure and not shared with any
                         <outlet property="emailField" destination="Cf2-n1-YWm" id="tpV-sf-kik"/>
                         <outlet property="nameField" destination="uhV-Cy-OCk" id="gKn-RS-o3v"/>
                         <outlet property="passwordField" destination="gtp-sf-1tY" id="bQE-ct-Gh9"/>
-                        <segue destination="0Ze-vC-Hgj" kind="presentation" identifier="registerSegue" id="GpZ-Ko-0Is"/>
+                        <segue destination="mkc-hd-rwN" kind="presentation" identifier="registerSegue" id="GpZ-Ko-0Is"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km6-1X-kB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,22 +220,12 @@ than recovering your account. Your information is secure and not shared with any
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F35-AS-e4p">
-                                <rect key="frame" x="336" y="52" width="70" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogout:" destination="0Ze-vC-Hgj" eventType="touchUpInside" id="e9s-X0-5Kz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IkF-CJ-q4u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="top" secondItem="gOc-4W-GiQ" secondAttribute="top" constant="120" id="6VF-hK-2ZM"/>
-                            <constraint firstItem="F35-AS-e4p" firstAttribute="top" secondItem="IkF-CJ-q4u" secondAttribute="top" constant="8" id="BpU-47-c3w"/>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="RPC-7l-r0v"/>
-                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="F35-AS-e4p" secondAttribute="trailing" constant="8" id="RcG-Au-vQl"/>
                             <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="N04-8a-z1c" secondAttribute="trailing" constant="20" id="S9n-A0-ZhA"/>
                             <constraint firstItem="N04-8a-z1c" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="UY7-7O-Q8y"/>
                             <constraint firstItem="N04-8a-z1c" firstAttribute="top" secondItem="KK0-TQ-Mdc" secondAttribute="bottom" constant="30" id="dvN-VZ-OqS"/>
@@ -244,7 +234,13 @@ than recovering your account. Your information is secure and not shared with any
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="96b-oi-U3e"/>
+                    <navigationItem key="navigationItem" id="96b-oi-U3e">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="KM7-uc-HYu">
+                            <connections>
+                                <action selector="onLogout:" destination="0Ze-vC-Hgj" id="z8B-Pm-eDd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="N04-8a-z1c" id="HBr-4j-TAb"/>
@@ -252,7 +248,7 @@ than recovering your account. Your information is secure and not shared with any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371" y="70"/>
+            <point key="canvasLocation" x="4279.7101449275369" y="69.642857142857139"/>
         </scene>
         <!--Login-->
         <scene sceneID="aPJ-MT-lAe">
@@ -325,7 +321,7 @@ than recovering your account. Your information is secure and not shared with any
                     <connections>
                         <outlet property="emailField" destination="8sP-qF-1rX" id="91J-ve-hK1"/>
                         <outlet property="passwordField" destination="Y0h-tg-EtQ" id="hlG-ai-xHb"/>
-                        <segue destination="0Ze-vC-Hgj" kind="presentation" identifier="loginSegue" id="cHH-ct-eU2"/>
+                        <segue destination="mkc-hd-rwN" kind="presentation" identifier="loginSegue" id="cHH-ct-eU2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCR-VZ-99I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -349,6 +345,24 @@ than recovering your account. Your information is secure and not shared with any
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbb-7c-flO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="922" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nWM-If-TQD">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mkc-hd-rwN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1F-dz-Sxu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Ze-vC-Hgj" kind="relationship" relationship="rootViewController" id="MoP-BU-UZd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZT-yu-tiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3448" y="70"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
