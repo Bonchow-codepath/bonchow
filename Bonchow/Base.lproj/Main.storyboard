@@ -11,7 +11,7 @@
         <!--Setup View Controller-->
         <scene sceneID="BcQ-Dk-QSg">
             <objects>
-                <viewController id="cIf-nH-Y8j" customClass="SetupViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetupViewController" id="cIf-nH-Y8j" customClass="SetupViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E2v-hf-V8M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,12 +220,22 @@ than recovering your account. Your information is secure and not shared with any
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F35-AS-e4p">
+                                <rect key="frame" x="336" y="52" width="70" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="0Ze-vC-Hgj" eventType="touchUpInside" id="e9s-X0-5Kz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IkF-CJ-q4u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="top" secondItem="gOc-4W-GiQ" secondAttribute="top" constant="120" id="6VF-hK-2ZM"/>
+                            <constraint firstItem="F35-AS-e4p" firstAttribute="top" secondItem="IkF-CJ-q4u" secondAttribute="top" constant="8" id="BpU-47-c3w"/>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="RPC-7l-r0v"/>
+                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="F35-AS-e4p" secondAttribute="trailing" constant="8" id="RcG-Au-vQl"/>
                             <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="N04-8a-z1c" secondAttribute="trailing" constant="20" id="S9n-A0-ZhA"/>
                             <constraint firstItem="N04-8a-z1c" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="UY7-7O-Q8y"/>
                             <constraint firstItem="N04-8a-z1c" firstAttribute="top" secondItem="KK0-TQ-Mdc" secondAttribute="bottom" constant="30" id="dvN-VZ-OqS"/>
@@ -233,9 +243,7 @@ than recovering your account. Your information is secure and not shared with any
                             <constraint firstItem="IkF-CJ-q4u" firstAttribute="bottom" secondItem="N04-8a-z1c" secondAttribute="bottom" constant="40" id="vMh-TX-wkX"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="2V6-bZ-s6c"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="96b-oi-U3e"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -344,7 +352,7 @@ than recovering your account. Your information is secure and not shared with any
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cHH-ct-eU2"/>
+        <segue reference="GpZ-Ko-0Is"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="1668" height="2224"/>

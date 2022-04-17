@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import Parse
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -44,6 +45,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.camera = GMSCameraPosition.camera(withTarget: newLocation!.coordinate, zoom: 13.0)
         
     }
+    
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let SetupViewController = main.instantiateViewController(withIdentifier: "SetupViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
+        
+        delegate.window?.rootViewController = SetupViewController
+    }
+    
     
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //            let userLocation = locations.last
