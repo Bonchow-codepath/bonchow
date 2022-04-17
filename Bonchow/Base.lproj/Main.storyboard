@@ -284,6 +284,7 @@ than recovering your account. Your information is secure and not shared with any
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onGetStarted:" destination="cIf-nH-Y8j" eventType="touchUpInside" id="OLP-gN-Spo"/>
+                                    <action selector="onLogin:" destination="T4n-P8-Hgn" eventType="touchUpInside" id="jr3-Se-Qt2"/>
                                     <action selector="onRegister:" destination="ZtD-pM-Syb" eventType="touchUpInside" id="uRC-QW-OQ3"/>
                                 </connections>
                             </button>
@@ -310,6 +311,8 @@ than recovering your account. Your information is secure and not shared with any
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="yqT-Xp-LeM"/>
                     <connections>
+                        <outlet property="emailField" destination="8sP-qF-1rX" id="91J-ve-hK1"/>
+                        <outlet property="passwordField" destination="Y0h-tg-EtQ" id="hlG-ai-xHb"/>
                         <segue destination="0Ze-vC-Hgj" kind="presentation" identifier="loginSegue" id="cHH-ct-eU2"/>
                     </connections>
                 </viewController>

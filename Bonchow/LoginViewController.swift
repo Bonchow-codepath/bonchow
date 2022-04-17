@@ -6,16 +6,32 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogin(_ sender: Any) {
+        let email = emailField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: email, password: password) { user, error in
+            if user != nil{
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print("error sign in")
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
