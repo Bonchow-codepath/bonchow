@@ -21,9 +21,12 @@ class RegisterViewController: UIViewController {
     
     @IBAction func onRegister(_ sender: Any) {
         let user = PFUser()
-        user.username = nameField.text
+        //user.username = nameField.text
+        //user.password = passwordField.text
+        //user.email = emailField.text
+        user["pseudonym"] = nameField.text
+        user.username = emailField.text
         user.password = passwordField.text
-        user.email = emailField.text
         user["food"] = "anything"
         
         user.signUpInBackground{ (success, error) in

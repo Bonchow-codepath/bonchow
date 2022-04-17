@@ -212,7 +212,7 @@ than recovering your account. Your information is secure and not shared with any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N04-8a-z1c" customClass="GMSMapView">
-                                <rect key="frame" x="20" y="184" width="374" height="638"/>
+                                <rect key="frame" x="20" y="184" width="374" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK0-TQ-Mdc">
@@ -233,7 +233,11 @@ than recovering your account. Your information is secure and not shared with any
                             <constraint firstItem="IkF-CJ-q4u" firstAttribute="bottom" secondItem="N04-8a-z1c" secondAttribute="bottom" constant="40" id="vMh-TX-wkX"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="2V6-bZ-s6c"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="96b-oi-U3e"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="N04-8a-z1c" id="HBr-4j-TAb"/>
                     </connections>
