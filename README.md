@@ -24,7 +24,7 @@ A mobile app that allows user to form and find dining group in local restaurants
 **Required Must-have Stories**
 
 * [X] Register an account
-* [ ] Stay logged in
+* [X] Stay logged in
 * [ ] Select cuisine interests
 * [ ] Create a dinning group
 * [ ] Join a dining group
