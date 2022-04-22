@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80O-VZ-wrY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1X8-j4-CW3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -328,6 +328,87 @@ than recovering your account. Your information is secure and not shared with any
             </objects>
             <point key="canvasLocation" x="2603" y="775"/>
         </scene>
+        <!--Restaurants Table View Controller-->
+        <scene sceneID="Q38-Na-dcC">
+            <objects>
+                <tableViewController storyboardIdentifier="RestaurantTableViewCell" id="1X8-j4-CW3" customClass="RestaurantsTableViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Ut-yx-8aJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="221" id="hUY-vw-65H" customClass="RestaurantTableViewCell" customModule="Bonchow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="221"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hUY-vw-65H" id="C73-Aa-V5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6X-M2-XZf">
+                                            <rect key="frame" x="28" y="19" width="55" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="55" id="Edc-Yh-L2s"/>
+                                                <constraint firstAttribute="height" constant="24" id="hhK-gs-rSy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpL-vj-BKY">
+                                            <rect key="frame" x="28" y="51" width="55" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="cax-20-NcQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLz-aV-md6">
+                                            <rect key="frame" x="269" y="19" width="133" height="199"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="133" id="oSR-jD-NcI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-Ws-a0A">
+                                            <rect key="frame" x="28" y="80" width="233" height="138"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k6X-M2-XZf" firstAttribute="leading" secondItem="C73-Aa-V5g" secondAttribute="leadingMargin" constant="8" id="2Hj-dk-zxM"/>
+                                        <constraint firstItem="bsd-Ws-a0A" firstAttribute="bottom" secondItem="C73-Aa-V5g" secondAttribute="bottomMargin" constant="8" id="82j-ZP-01E"/>
+                                        <constraint firstItem="iLz-aV-md6" firstAttribute="top" secondItem="C73-Aa-V5g" secondAttribute="topMargin" constant="8" id="Ahx-AL-cSp"/>
+                                        <constraint firstItem="bsd-Ws-a0A" firstAttribute="leading" secondItem="C73-Aa-V5g" secondAttribute="leadingMargin" constant="8" id="E0k-6Q-bo9"/>
+                                        <constraint firstItem="iLz-aV-md6" firstAttribute="trailing" secondItem="C73-Aa-V5g" secondAttribute="trailingMargin" constant="8" id="H7R-mp-6pw"/>
+                                        <constraint firstItem="iLz-aV-md6" firstAttribute="leading" secondItem="bsd-Ws-a0A" secondAttribute="trailing" constant="8" id="asw-57-jZS"/>
+                                        <constraint firstItem="OpL-vj-BKY" firstAttribute="leading" secondItem="C73-Aa-V5g" secondAttribute="leadingMargin" constant="8" id="gGA-0h-tiI"/>
+                                        <constraint firstItem="bsd-Ws-a0A" firstAttribute="top" secondItem="OpL-vj-BKY" secondAttribute="bottom" constant="8" id="i4m-Ov-rsw"/>
+                                        <constraint firstItem="k6X-M2-XZf" firstAttribute="centerX" secondItem="OpL-vj-BKY" secondAttribute="centerX" id="iBk-kf-QbF"/>
+                                        <constraint firstItem="k6X-M2-XZf" firstAttribute="top" secondItem="C73-Aa-V5g" secondAttribute="topMargin" constant="8" id="oGv-8Q-vQa"/>
+                                        <constraint firstItem="OpL-vj-BKY" firstAttribute="top" secondItem="k6X-M2-XZf" secondAttribute="bottom" constant="8" id="ra9-C3-tRO"/>
+                                        <constraint firstItem="iLz-aV-md6" firstAttribute="bottom" secondItem="C73-Aa-V5g" secondAttribute="bottomMargin" constant="8" id="t8E-Gy-FE1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentLabel" destination="bsd-Ws-a0A" id="dMw-Kv-oXG"/>
+                                    <outlet property="cuisineLabel" destination="OpL-vj-BKY" id="hay-yU-N11"/>
+                                    <outlet property="nameLabel" destination="k6X-M2-XZf" id="BBo-UV-Pge"/>
+                                    <outlet property="resImageView" destination="iLz-aV-md6" id="POO-o2-z8C"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1X8-j4-CW3" id="6xx-Fu-ZZv"/>
+                            <outlet property="delegate" destination="1X8-j4-CW3" id="Enx-Li-tny"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbs-gc-cGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3963.7681159420295" y="774.77678571428567"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4ea-La-3Ul">
             <objects>
@@ -371,6 +452,9 @@ than recovering your account. Your information is secure and not shared with any
     <resources>
         <image name="background" width="1668" height="2224"/>
         <image name="logo" width="628" height="216"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
