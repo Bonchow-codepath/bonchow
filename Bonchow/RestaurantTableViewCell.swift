@@ -9,6 +9,7 @@ import UIKit
 
 class RestaurantTableViewCell: UITableViewCell {
 
+    //Cell with all the data
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cuisineLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!

@@ -22,7 +22,7 @@ struct yelpAPI {
     
     static func getRestaurants(completion: @escaping ([[String:Any]]?) -> Void) {
         
-        // ––––– TODO: Add your own API key!
+        //Yvonne's API
         let apikey = "eT8Uqx2sMSBPt0sGoQ5m3ZnbMMLoKEDPpruVLpGgdWzr1a7D9dR051vB3ppqjkRM1BjtgikzWpm-Kw4vEEUiSDbbp0-Fc4M59QXyizD4Q9LsjNPFAAxaHmRcqKhgYnYx"
         
         // Coordinates for San Francisco

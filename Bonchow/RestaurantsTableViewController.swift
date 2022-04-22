@@ -9,6 +9,7 @@ import UIKit
 
 class RestaurantsTableViewController: UITableViewController {
     
+    //Data Source
     var restaurantsArray: [[String:Any?]] = []
 
     override func viewDidLoad() {
