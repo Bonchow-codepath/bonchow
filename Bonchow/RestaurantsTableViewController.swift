@@ -15,10 +15,10 @@ class RestaurantsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getAPIdata()
+        getAPIdata(latitude: 40.697884, longitude: -73.993586)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,8 +28,8 @@ class RestaurantsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    func getAPIdata(){
-        yelpAPI.getRestaurants(){
+    func getAPIdata(latitude : Double, longitude : Double){
+        yelpAPI.getRestaurants(latitude: latitude, longitude: longitude){
             (restaurants) in guard let restaurants = restaurants else {
                 return
             }
@@ -78,7 +78,7 @@ class RestaurantsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

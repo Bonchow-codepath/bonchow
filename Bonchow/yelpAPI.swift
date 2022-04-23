@@ -18,16 +18,24 @@ import Foundation
 
 struct yelpAPI {
     
-
+//    var latitude = 0
+//    var longitude = 0
     
-    static func getRestaurants(completion: @escaping ([[String:Any]]?) -> Void) {
+    func changeCoordinates(latitude: Double, longitude : Double) {
+        
+    }
+    
+    static func getRestaurants(latitude : Double, longitude : Double, completion: @escaping ([[String:Any]]?) -> Void) {
         
         //Yvonne's API
         let apikey = "eT8Uqx2sMSBPt0sGoQ5m3ZnbMMLoKEDPpruVLpGgdWzr1a7D9dR051vB3ppqjkRM1BjtgikzWpm-Kw4vEEUiSDbbp0-Fc4M59QXyizD4Q9LsjNPFAAxaHmRcqKhgYnYx"
         
         // Coordinates for San Francisco
-        let lat = 37.773972
-        let long = -122.431297
+//        let lat = 37.773972
+//        let long = -122.431297
+        
+        let lat = latitude
+        let long = longitude
         
         
         let url = URL(string: "https://api.yelp.com/v3/transactions/delivery/search?latitude=\(lat)&longitude=\(long)")!
@@ -45,10 +53,9 @@ struct yelpAPI {
                 print(error.localizedDescription)
             } else if let data = data {
                 
-        
+    
 
-        // ––––– TODO: Get data from API and return it using completion
-        print(data)
+//        print(data)
         
         let dataDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as! [String:Any]
                 
