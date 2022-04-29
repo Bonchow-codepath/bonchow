@@ -22,6 +22,8 @@
 		04D28F9927F894C300E64F10 /* BonchowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D28F9827F894C300E64F10 /* BonchowUITestsLaunchTests.swift */; };
 		390FCC85B824CDFC06B86549 /* Pods_Bonchow_BonchowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4867143D5A1165ABE6BD70DA /* Pods_Bonchow_BonchowUITests.framework */; };
 		B21CF938EA9F472F3D8BFAF0 /* Pods_BonchowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4704CCC7008977F669B4857 /* Pods_BonchowTests.framework */; };
+		B4198DEA281A0A96001D56EA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4198DE9281A0A96001D56EA /* LocationManager.swift */; };
+		B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4198DEE281A38A8001D56EA /* PopUpViewController.swift */; };
 		B488A0D22810D8FE00F7F1FC /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */; };
 		B488A0D42810DD9A00F7F1FC /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */; };
 		B488A0D62810E1A300F7F1FC /* yelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D52810E1A300F7F1FC /* yelpAPI.swift */; };
@@ -66,6 +68,8 @@
 		243D1B14E845BBD51EA76EC2 /* Pods-Bonchow-BonchowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonchow-BonchowUITests.release.xcconfig"; path = "Target Support Files/Pods-Bonchow-BonchowUITests/Pods-Bonchow-BonchowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4867143D5A1165ABE6BD70DA /* Pods_Bonchow_BonchowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonchow_BonchowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDCD265D2FF6F0DF410FB90 /* Pods-BonchowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonchowTests.debug.xcconfig"; path = "Target Support Files/Pods-BonchowTests/Pods-BonchowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4198DE9281A0A96001D56EA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B4198DEE281A38A8001D56EA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B451C59F6B989A446BE9B605 /* Pods-Bonchow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonchow.debug.xcconfig"; path = "Target Support Files/Pods-Bonchow/Pods-Bonchow.debug.xcconfig"; sourceTree = "<group>"; };
 		B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				04D28F7727F894C100E64F10 /* SceneDelegate.swift */,
 				04D28F7927F894C100E64F10 /* ViewController.swift */,
 				04D28F7B27F894C100E64F10 /* Main.storyboard */,
+				B4198DEE281A38A8001D56EA /* PopUpViewController.swift */,
 				B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */,
 				B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */,
 				B488A0D52810E1A300F7F1FC /* yelpAPI.swift */,
@@ -143,6 +148,7 @@
 				041723A927F8A4B200C4F541 /* SetupViewController.swift */,
 				041723AB27F8A7F700C4F541 /* RegisterViewController.swift */,
 				041723AD27F8A82E00C4F541 /* LoginViewController.swift */,
+				B4198DE9281A0A96001D56EA /* LocationManager.swift */,
 				04C611AC27F8B7DF005CDC54 /* MapViewController.swift */,
 			);
 			path = Bonchow;
@@ -466,9 +472,11 @@
 				B488A0D62810E1A300F7F1FC /* yelpAPI.swift in Sources */,
 				041723AE27F8A82E00C4F541 /* LoginViewController.swift in Sources */,
 				041723AA27F8A4B200C4F541 /* SetupViewController.swift in Sources */,
+				B4198DEA281A0A96001D56EA /* LocationManager.swift in Sources */,
 				B488A0D22810D8FE00F7F1FC /* RestaurantsTableViewController.swift in Sources */,
 				041723AC27F8A7F700C4F541 /* RegisterViewController.swift in Sources */,
 				04D28F7A27F894C100E64F10 /* ViewController.swift in Sources */,
+				B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */,
 				04D28F7627F894C100E64F10 /* AppDelegate.swift in Sources */,
 				04D28F7827F894C100E64F10 /* SceneDelegate.swift in Sources */,
 				B488A0D42810DD9A00F7F1FC /* RestaurantTableViewCell.swift in Sources */,

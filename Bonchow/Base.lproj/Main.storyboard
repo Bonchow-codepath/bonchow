@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1X8-j4-CW3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80O-VZ-wrY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -211,26 +211,25 @@ than recovering your account. Your information is secure and not shared with any
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N04-8a-z1c" customClass="GMSMapView">
-                                <rect key="frame" x="20" y="184" width="374" height="589"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK0-TQ-Mdc">
                                 <rect key="frame" x="20" y="120" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-jT-b17">
+                                <rect key="frame" x="20" y="174" width="374" height="639"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IkF-CJ-q4u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Izc-jT-b17" firstAttribute="top" secondItem="KK0-TQ-Mdc" secondAttribute="bottom" constant="20" id="1Zv-eG-OQ9"/>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="top" secondItem="gOc-4W-GiQ" secondAttribute="top" constant="120" id="6VF-hK-2ZM"/>
                             <constraint firstItem="KK0-TQ-Mdc" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="RPC-7l-r0v"/>
-                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="N04-8a-z1c" secondAttribute="trailing" constant="20" id="S9n-A0-ZhA"/>
-                            <constraint firstItem="N04-8a-z1c" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="UY7-7O-Q8y"/>
-                            <constraint firstItem="N04-8a-z1c" firstAttribute="top" secondItem="KK0-TQ-Mdc" secondAttribute="bottom" constant="30" id="dvN-VZ-OqS"/>
+                            <constraint firstItem="Izc-jT-b17" firstAttribute="bottom" secondItem="IkF-CJ-q4u" secondAttribute="bottom" id="mV7-p2-Ae8"/>
+                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="Izc-jT-b17" secondAttribute="trailing" constant="20" id="qLK-r7-BHe"/>
                             <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="KK0-TQ-Mdc" secondAttribute="trailing" constant="20" id="qeF-y5-yWf"/>
-                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="bottom" secondItem="N04-8a-z1c" secondAttribute="bottom" constant="40" id="vMh-TX-wkX"/>
+                            <constraint firstItem="Izc-jT-b17" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="wL9-Rg-JyY"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -243,12 +242,68 @@ than recovering your account. Your information is secure and not shared with any
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="N04-8a-z1c" id="HBr-4j-TAb"/>
+                        <outlet property="mapView" destination="Izc-jT-b17" id="wMa-iN-aqr"/>
+                        <segue destination="oZS-dJ-oUb" kind="presentation" identifier="Detail" id="fPQ-9f-u2p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4279.7101449275369" y="69.642857142857139"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="o84-vI-cln">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" modalPresentationStyle="overCurrentContext" id="oZS-dJ-oUb" customClass="PopUpViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iX9-Je-Qqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-zj-D7s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RestaurantName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeD-Eu-vCd">
+                                        <rect key="frame" x="52" y="67" width="128" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-sc-BGv">
+                                        <rect key="frame" x="51" y="121" width="69" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancal"/>
+                                        <connections>
+                                            <action selector="Oncancal:" destination="oZS-dJ-oUb" eventType="touchUpInside" id="5sZ-Yx-a87"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pe-an-NFv">
+                                        <rect key="frame" x="60" y="174" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Join"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JIg-9B-aGc"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JIg-9B-aGc" firstAttribute="trailing" secondItem="8sd-zj-D7s" secondAttribute="trailing" id="GGd-6B-V23"/>
+                            <constraint firstItem="8sd-zj-D7s" firstAttribute="top" secondItem="iX9-Je-Qqd" secondAttribute="top" id="rvQ-ob-SFo"/>
+                            <constraint firstItem="8sd-zj-D7s" firstAttribute="leading" secondItem="JIg-9B-aGc" secondAttribute="leading" id="u9o-EE-gXN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Join" destination="8sd-zj-D7s" id="ayZ-iV-mgj"/>
+                        <outlet property="popUpView" destination="iX9-Je-Qqd" id="SYL-Qx-n5k"/>
+                        <outlet property="resName" destination="FeD-Eu-vCd" id="MMB-Oi-Hfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLR-CM-5eU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5175.36231884058" y="77.678571428571431"/>
         </scene>
         <!--Login-->
         <scene sceneID="aPJ-MT-lAe">
@@ -449,7 +504,7 @@ than recovering your account. Your information is secure and not shared with any
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GpZ-Ko-0Is"/>
+        <segue reference="cHH-ct-eU2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="1668" height="2224"/>
