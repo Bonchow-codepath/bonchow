@@ -10,6 +10,8 @@
 		041723AA27F8A4B200C4F541 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723A927F8A4B200C4F541 /* SetupViewController.swift */; };
 		041723AC27F8A7F700C4F541 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723AB27F8A7F700C4F541 /* RegisterViewController.swift */; };
 		041723AE27F8A82E00C4F541 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723AD27F8A82E00C4F541 /* LoginViewController.swift */; };
+		04523F39281C5DB300736C2A /* FetchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04523F38281C5DB300736C2A /* FetchLocationViewController.swift */; };
+		047B4E8F281D8BE700D81202 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B4E8E281D8BE700D81202 /* PinAnnotation.swift */; };
 		04C611AD27F8B7DF005CDC54 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C611AC27F8B7DF005CDC54 /* MapViewController.swift */; };
 		04D28F7627F894C100E64F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D28F7527F894C100E64F10 /* AppDelegate.swift */; };
 		04D28F7827F894C100E64F10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D28F7727F894C100E64F10 /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 		041723A927F8A4B200C4F541 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		041723AB27F8A7F700C4F541 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		041723AD27F8A82E00C4F541 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04523F38281C5DB300736C2A /* FetchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationViewController.swift; sourceTree = "<group>"; };
+		047B4E8E281D8BE700D81202 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		04C611AC27F8B7DF005CDC54 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		04D28F7227F894C100E64F10 /* Bonchow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonchow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D28F7527F894C100E64F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				04D28F7727F894C100E64F10 /* SceneDelegate.swift */,
 				04D28F7927F894C100E64F10 /* ViewController.swift */,
 				04D28F7B27F894C100E64F10 /* Main.storyboard */,
+				04523F38281C5DB300736C2A /* FetchLocationViewController.swift */,
+				047B4E8E281D8BE700D81202 /* PinAnnotation.swift */,
 				B4198DEE281A38A8001D56EA /* PopUpViewController.swift */,
 				B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */,
 				B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */,
@@ -473,7 +479,9 @@
 				041723AE27F8A82E00C4F541 /* LoginViewController.swift in Sources */,
 				041723AA27F8A4B200C4F541 /* SetupViewController.swift in Sources */,
 				B4198DEA281A0A96001D56EA /* LocationManager.swift in Sources */,
+				04523F39281C5DB300736C2A /* FetchLocationViewController.swift in Sources */,
 				B488A0D22810D8FE00F7F1FC /* RestaurantsTableViewController.swift in Sources */,
+				047B4E8F281D8BE700D81202 /* PinAnnotation.swift in Sources */,
 				041723AC27F8A7F700C4F541 /* RegisterViewController.swift in Sources */,
 				04D28F7A27F894C100E64F10 /* ViewController.swift in Sources */,
 				B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */,

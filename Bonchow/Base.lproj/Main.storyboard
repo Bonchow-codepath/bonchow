@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80O-VZ-wrY">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="SetupViewController" id="cIf-nH-Y8j" customClass="SetupViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E2v-hf-V8M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-pz-ycd">
@@ -28,10 +28,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uek-qJ-gvD">
-                                <rect key="frame" x="73" y="140" width="269" height="186"/>
+                                <rect key="frame" x="73" y="140" width="230" height="186"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I75-dH-zvX">
-                                <rect key="frame" x="20" y="564" width="374" height="50"/>
+                                <rect key="frame" x="20" y="564" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4NL-xd-D15"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zI-H4-egW">
-                                <rect key="frame" x="20" y="624" width="374" height="50"/>
+                                <rect key="frame" x="20" y="624" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="r4q-mO-WLc"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find people to  eat with" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-oR-0qy">
-                                <rect key="frame" x="60" y="334" width="294" height="48"/>
+                                <rect key="frame" x="60" y="334" width="255" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.99607843137254903" green="0.46666666666666667" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -102,33 +102,33 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="ZtD-pM-Syb" customClass="RegisterViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AcB-Rf-UXJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-Cy-OCk">
-                                <rect key="frame" x="20" y="182" width="374" height="34"/>
+                                <rect key="frame" x="20" y="182" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" text="What do you like to call yourself?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2X-id-zuD">
-                                <rect key="frame" x="20" y="148" width="374" height="21"/>
+                                <rect key="frame" x="20" y="148" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" text="Please enter your email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE0-zd-bKb">
-                                <rect key="frame" x="20" y="252" width="374" height="21"/>
+                                <rect key="frame" x="20" y="252" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cf2-n1-YWm">
-                                <rect key="frame" x="20" y="281" width="374" height="34"/>
+                                <rect key="frame" x="20" y="281" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miC-XA-J9e">
-                                <rect key="frame" x="20" y="333" width="374" height="39.5"/>
+                                <rect key="frame" x="20" y="333" width="335" height="39.666666666666686"/>
                                 <string key="text">We do not use your email for anything other 
 than recovering your account. Your information is secure and not shared with anyone else.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -136,18 +136,18 @@ than recovering your account. Your information is secure and not shared with any
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" text="Enter your password as a way to sign-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-3a-syh">
-                                <rect key="frame" x="20" y="418.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="418.66666666666669" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (must be 6-20 characters)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtp-sf-1tY">
-                                <rect key="frame" x="20" y="447.5" width="374" height="34"/>
+                                <rect key="frame" x="20" y="447.66666666666669" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snr-12-8PH">
-                                <rect key="frame" x="20" y="553.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="553.66666666666663" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fmr-pS-50E"/>
                                 </constraints>
@@ -206,35 +206,48 @@ than recovering your account. Your information is secure and not shared with any
         <!--Map View Controller-->
         <scene sceneID="zuG-l2-yaX">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="0Ze-vC-Hgj" customClass="MapViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOc-4W-GiQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK0-TQ-Mdc">
-                                <rect key="frame" x="20" y="120" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-jT-b17">
-                                <rect key="frame" x="20" y="174" width="374" height="639"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Here are some restaurants near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igz-Wu-MSs">
+                                <rect key="frame" x="20" y="98" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-jT-b17">
+                                <rect key="frame" x="0.0" y="129" width="375" height="600"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IkF-CJ-q4u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Izc-jT-b17" firstAttribute="top" secondItem="KK0-TQ-Mdc" secondAttribute="bottom" constant="20" id="1Zv-eG-OQ9"/>
-                            <constraint firstItem="KK0-TQ-Mdc" firstAttribute="top" secondItem="gOc-4W-GiQ" secondAttribute="top" constant="120" id="6VF-hK-2ZM"/>
-                            <constraint firstItem="KK0-TQ-Mdc" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="RPC-7l-r0v"/>
-                            <constraint firstItem="Izc-jT-b17" firstAttribute="bottom" secondItem="IkF-CJ-q4u" secondAttribute="bottom" id="mV7-p2-Ae8"/>
-                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="Izc-jT-b17" secondAttribute="trailing" constant="20" id="qLK-r7-BHe"/>
-                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="KK0-TQ-Mdc" secondAttribute="trailing" constant="20" id="qeF-y5-yWf"/>
-                            <constraint firstItem="Izc-jT-b17" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" constant="20" id="wL9-Rg-JyY"/>
+                            <constraint firstItem="Izc-jT-b17" firstAttribute="top" secondItem="igz-Wu-MSs" secondAttribute="bottom" constant="10" id="A5d-ii-r6m"/>
+                            <constraint firstItem="igz-Wu-MSs" firstAttribute="top" secondItem="IkF-CJ-q4u" secondAttribute="top" constant="10" id="acR-lP-xlx"/>
+                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="bottom" secondItem="Izc-jT-b17" secondAttribute="bottom" id="l7Z-dE-wKx"/>
+                            <constraint firstItem="IkF-CJ-q4u" firstAttribute="trailing" secondItem="Izc-jT-b17" secondAttribute="trailing" id="qLK-r7-BHe"/>
+                            <constraint firstItem="Izc-jT-b17" firstAttribute="leading" secondItem="IkF-CJ-q4u" secondAttribute="leading" id="wL9-Rg-JyY"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="96b-oi-U3e">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="KM7-uc-HYu">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="fcc-6g-ybV">
+                            <rect key="frame" x="187.66666666666666" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GJK-We-WnJ">
+                                    <rect key="frame" x="-60" y="-25" width="120" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="KM7-uc-HYu">
+                            <color key="tintColor" red="0.36470588240000001" green="0.0" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onLogout:" destination="0Ze-vC-Hgj" id="z8B-Pm-eDd"/>
                             </connections>
@@ -243,23 +256,81 @@ than recovering your account. Your information is secure and not shared with any
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Izc-jT-b17" id="wMa-iN-aqr"/>
-                        <segue destination="oZS-dJ-oUb" kind="presentation" identifier="Detail" id="fPQ-9f-u2p"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4279.7101449275369" y="69.642857142857139"/>
+            <point key="canvasLocation" x="4993" y="69"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aPV-7M-WD3">
+            <objects>
+                <viewController id="GfX-Wg-SXR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bUh-N4-kcb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-Ms-pBU">
+                                <rect key="frame" x="16" y="409" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Directions">
+                                    <color key="baseBackgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Session in-progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C48-oh-GFS">
+                                <rect key="frame" x="16" y="75" width="318" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-FS-VJF">
+                                <rect key="frame" x="16" y="139" width="343" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-pg-LkJ">
+                                <rect key="frame" x="16" y="114" width="343" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTo-lD-Xhe">
+                                <rect key="frame" x="16" y="307" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8T-Vh-R2V">
+                                <rect key="frame" x="16" y="336" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvI-qU-oiq">
+                                <rect key="frame" x="16" y="463" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Stop Session"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hIv-NV-9B4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZv-i4-HQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5912.8000000000002" y="68.7192118226601"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="o84-vI-cln">
             <objects>
                 <viewController storyboardIdentifier="PopUpViewController" modalPresentationStyle="overCurrentContext" id="oZS-dJ-oUb" customClass="PopUpViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iX9-Je-Qqd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-zj-D7s">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RestaurantName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeD-Eu-vCd">
                                         <rect key="frame" x="52" y="67" width="128" height="21"/>
@@ -303,40 +374,40 @@ than recovering your account. Your information is secure and not shared with any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLR-CM-5eU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5175.36231884058" y="77.678571428571431"/>
+            <point key="canvasLocation" x="4946" y="774"/>
         </scene>
         <!--Login-->
         <scene sceneID="aPJ-MT-lAe">
             <objects>
                 <viewController id="T4n-P8-Hgn" customClass="LoginViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HHu-Ty-b4N">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sP-qF-1rX">
-                                <rect key="frame" x="20" y="182" width="374" height="34"/>
+                                <rect key="frame" x="20" y="182" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" text="Enter your email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="298-Cs-mBh">
-                                <rect key="frame" x="20" y="148" width="374" height="21"/>
+                                <rect key="frame" x="20" y="148" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="20" verticalHuggingPriority="20" text="Enter your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh3-hK-Ljv">
-                                <rect key="frame" x="20" y="252" width="374" height="21"/>
+                                <rect key="frame" x="20" y="252" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-tg-EtQ">
-                                <rect key="frame" x="20" y="281" width="374" height="34"/>
+                                <rect key="frame" x="20" y="281" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="20" verticalHuggingPriority="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-eH-xpR">
-                                <rect key="frame" x="20" y="387" width="374" height="50"/>
+                                <rect key="frame" x="20" y="387" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Bnp-kW-m0h"/>
                                 </constraints>
@@ -388,20 +459,20 @@ than recovering your account. Your information is secure and not shared with any
             <objects>
                 <tableViewController storyboardIdentifier="RestaurantTableViewCell" id="1X8-j4-CW3" customClass="RestaurantsTableViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Ut-yx-8aJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="221" id="hUY-vw-65H" customClass="RestaurantTableViewCell" customModule="Bonchow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="221"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hUY-vw-65H" id="C73-Aa-V5g">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6X-M2-XZf">
-                                            <rect key="frame" x="28" y="19" width="55" height="24"/>
+                                            <rect key="frame" x="24" y="19" width="55" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="55" id="Edc-Yh-L2s"/>
                                                 <constraint firstAttribute="height" constant="24" id="hhK-gs-rSy"/>
@@ -411,7 +482,7 @@ than recovering your account. Your information is secure and not shared with any
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpL-vj-BKY">
-                                            <rect key="frame" x="28" y="51" width="55" height="21"/>
+                                            <rect key="frame" x="24" y="51" width="55" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="cax-20-NcQ"/>
                                             </constraints>
@@ -420,13 +491,13 @@ than recovering your account. Your information is secure and not shared with any
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLz-aV-md6">
-                                            <rect key="frame" x="269" y="19" width="133" height="199"/>
+                                            <rect key="frame" x="234" y="19" width="133" height="199"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="133" id="oSR-jD-NcI"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-Ws-a0A">
-                                            <rect key="frame" x="28" y="80" width="233" height="138"/>
+                                            <rect key="frame" x="24" y="80" width="202" height="138"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -472,7 +543,7 @@ than recovering your account. Your information is secure and not shared with any
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="80O-VZ-wrY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7gQ-Uc-WY7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -490,7 +561,7 @@ than recovering your account. Your information is secure and not shared with any
                 <navigationController storyboardIdentifier="MapNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mkc-hd-rwN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1F-dz-Sxu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -504,7 +575,7 @@ than recovering your account. Your information is secure and not shared with any
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cHH-ct-eU2"/>
+        <segue reference="GpZ-Ko-0Is"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="1668" height="2224"/>

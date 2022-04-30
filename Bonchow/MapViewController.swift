@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import GoogleMaps
 import Parse
 import Foundation
 import MapKit
@@ -15,11 +14,15 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-//    @IBOutlet weak var mapView: GMSMapView!
     
     let manager = CLLocationManager()
     
     var userLocation: CLLocation!
+    
+    
+    
+    
+    
     
     var a = 0.0
     var b = 0.0
@@ -28,82 +31,148 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var pins: [MKPointAnnotation] = []
     
+    var pins2: [PinAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        mapView = MKMapView()
-//        mapView.delegate = self
-//        mapView.isZoomEnabled = true
-//        mapView.isScrollEnabled = true
-        getRestaurants()
+        
+        mapView.delegate = self
     }
     
-    func getRestaurants(){
-        LocationManager.shared.getUserLocation{ [weak self] location in
-            DispatchQueue.main.async {
-                guard let strongSelf = self else {
-                    return
-                }
-//                let pin = MKPointAnnotation()
-//                pin.coordinate = location.coordinate
-                self!.userLocation = location
-                self!.a = self!.userLocation.coordinate.latitude
-                self!.b = self!.userLocation.coordinate.longitude
-                self!.getAPIdata(latitude: self!.a, longitude: self!.b)
-                print(self!.a)
-                print(self!.b)
-                print(self!.restaurantsArray)
-                //print(self!.pins) does not work
-                strongSelf.mapView.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated:true)
-//                strongSelf.appleMapView.addAnnotation(pin)
-            }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.delegate = self
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first {
+            manager.stopUpdatingLocation()
+            print(location.coordinate.latitude)
+            print(location.coordinate.longitude)
+            render(location)
+            getRestaurants(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         }
     }
     
-    func getAPIdata(latitude : Double, longitude : Double ) {
+    func render(_ location : CLLocation) {
+        
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        
+        
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        
+    }
+    
+    
+    func getRestaurants(latitude: Double, longitude: Double) {
+        self.getAPIData(latitude: latitude, longitude: longitude)
+    }
+    
+    func getAPIData(latitude : Double, longitude : Double ) {
         yelpAPI.getRestaurants(latitude: latitude, longitude: longitude){
             (restaurants) in guard let restaurants = restaurants else {
                 print("did not work!")
                 return
             }
             self.restaurantsArray = restaurants
+            print(self.restaurantsArray)
             for restaurant in self.restaurantsArray {
-                let marker = MKPointAnnotation()
+                
+//                let marker = MKPointAnnotation()
                 let resTitle = restaurant["name"] as! String
                 let resType = restaurant["categories"] as! [[String:Any?]]
                 let coordinates = restaurant["coordinates"] as! NSDictionary
                 let latitude = coordinates["latitude"] as! CLLocationDegrees
                 let longitude = coordinates["longitude"] as! CLLocationDegrees
-                marker.coordinate.latitude = latitude
-                marker.coordinate.longitude = longitude
-                marker.title = resTitle
-                marker.subtitle = ""
+                
+                
+                let pinAnnotation = PinAnnotation()
+                pinAnnotation.setCoordinate(newCoordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+                pinAnnotation.title = resTitle
+                pinAnnotation.subtitle = ""
                 for type in resType{
                     let kind = type["title"] as! String
-                    marker.subtitle! += " "
-                    marker.subtitle! += kind
+                    pinAnnotation.subtitle! += " "
+                    pinAnnotation.subtitle! += kind
                 }
                 
-                self.pins.append(marker)
-                //print(self.pins)
-                //<a href="https://www.flaticon.com/free-icons/food" title="food icons">Food icons created by André Luiz Gollo - Flaticon</a>
-                //marker.image =
-                self.mapView.addAnnotation(marker)
+                self.pins2.append(pinAnnotation)
+                self.mapView.addAnnotation(pinAnnotation)
+                
+                //                Set markers
+//                marker.coordinate.latitude = latitude
+//                marker.coordinate.longitude = longitude
+//                marker.title = resTitle
+//                marker.subtitle = ""
+//                for type in resType{
+//                    let kind = type["title"] as! String
+//                    marker.subtitle! += " "
+//                    marker.subtitle! += kind
+//                }
+//                self.pins.append(marker)
+//                self.mapView.addAnnotation(marker)
+                
+                
             }
         }
 
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//            print("Function called!")
+            if annotation is PinAnnotation {
+                let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
+
+                pinAnnotationView.pinTintColor = .purple
+                pinAnnotationView.isDraggable = true
+                pinAnnotationView.canShowCallout = true
+                pinAnnotationView.animatesDrop = true
+
+                let startSessionButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
+                startSessionButton.frame.size.width = 44
+                startSessionButton.frame.size.height = 44
+                startSessionButton.backgroundColor = UIColor.green
+                startSessionButton.setImage(UIImage(named: "add"), for: [])
+  
+                pinAnnotationView.rightCalloutAccessoryView = startSessionButton
+
+                return pinAnnotationView
+            }
+
+            return nil
+    }
+
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            if let annotation = view.annotation as? PinAnnotation {
+                print(view.annotation?.title!)
+            }
+        
+    }
+    
+    
+
 
     
     
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
-        {
-            print("work")
-            if let annotationTitle = view.annotation?.title
-            {
-                print("User tapped on annotation with title: \(annotationTitle!)")
-            }
-        }
+//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+//        {
+//            print("work")
+//            if let annotationTitle = view.annotation?.title
+//            {
+//                print("User tapped on annotation with title: \(annotationTitle!)")
+//            }
+//        }
     
     
     
