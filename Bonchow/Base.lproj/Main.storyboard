@@ -206,7 +206,6 @@ than recovering your account. Your information is secure and not shared with any
         <!--Map View Controller-->
         <scene sceneID="zuG-l2-yaX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="0Ze-vC-Hgj" customClass="MapViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOc-4W-GiQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -256,17 +255,19 @@ than recovering your account. Your information is secure and not shared with any
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Izc-jT-b17" id="wMa-iN-aqr"/>
+                        <segue destination="GfX-Wg-SXR" kind="presentation" identifier="detailSegue" id="kos-cL-ww9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-O1-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4993" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="aPV-7M-WD3">
             <objects>
-                <viewController id="GfX-Wg-SXR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="GfX-Wg-SXR" customClass="DetailViewController" customModule="Bonchow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUh-N4-kcb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-Ms-pBU">
@@ -276,6 +277,9 @@ than recovering your account. Your information is secure and not shared with any
                                 <buttonConfiguration key="configuration" style="filled" title="Get Directions">
                                     <color key="baseBackgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="getDirection:" destination="GfX-Wg-SXR" eventType="touchUpInside" id="K0J-wb-g9a"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Session in-progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C48-oh-GFS">
                                 <rect key="frame" x="16" y="75" width="318" height="21"/>
@@ -300,7 +304,7 @@ than recovering your account. Your information is secure and not shared with any
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8T-Vh-R2V">
-                                <rect key="frame" x="16" y="336" width="63" height="21"/>
+                                <rect key="frame" x="16" y="336" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -310,12 +314,26 @@ than recovering your account. Your information is secure and not shared with any
                                 <rect key="frame" x="16" y="463" width="343" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmGroup:" destination="GfX-Wg-SXR" eventType="touchUpInside" id="dra-Xf-dwc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEl-XA-JD8">
+                                <rect key="frame" x="16" y="517" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Stop Session"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hIv-NV-9B4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="resAddress" destination="i8T-Vh-R2V" id="1Xq-Yo-ik7"/>
+                        <outlet property="resMapView" destination="Ocn-FS-VJF" id="Nml-FH-ZyS"/>
+                        <outlet property="resName" destination="tTo-lD-Xhe" id="1VG-sG-kLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZv-i4-HQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

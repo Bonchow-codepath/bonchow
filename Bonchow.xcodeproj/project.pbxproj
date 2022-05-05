@@ -26,6 +26,7 @@
 		B21CF938EA9F472F3D8BFAF0 /* Pods_BonchowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4704CCC7008977F669B4857 /* Pods_BonchowTests.framework */; };
 		B4198DEA281A0A96001D56EA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4198DE9281A0A96001D56EA /* LocationManager.swift */; };
 		B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4198DEE281A38A8001D56EA /* PopUpViewController.swift */; };
+		B45F2F7D281D9FB300C7DD4B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F2F7C281D9FB300C7DD4B /* DetailViewController.swift */; };
 		B488A0D22810D8FE00F7F1FC /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */; };
 		B488A0D42810DD9A00F7F1FC /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */; };
 		B488A0D62810E1A300F7F1FC /* yelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488A0D52810E1A300F7F1FC /* yelpAPI.swift */; };
@@ -75,6 +76,7 @@
 		B4198DE9281A0A96001D56EA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B4198DEE281A38A8001D56EA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B451C59F6B989A446BE9B605 /* Pods-Bonchow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonchow.debug.xcconfig"; path = "Target Support Files/Pods-Bonchow/Pods-Bonchow.debug.xcconfig"; sourceTree = "<group>"; };
+		B45F2F7C281D9FB300C7DD4B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B488A0D12810D8FE00F7F1FC /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		B488A0D32810DD9A00F7F1FC /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		B488A0D52810E1A300F7F1FC /* yelpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelpAPI.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				04D28F7727F894C100E64F10 /* SceneDelegate.swift */,
 				04D28F7927F894C100E64F10 /* ViewController.swift */,
 				04D28F7B27F894C100E64F10 /* Main.storyboard */,
+				B45F2F7C281D9FB300C7DD4B /* DetailViewController.swift */,
 				04523F38281C5DB300736C2A /* FetchLocationViewController.swift */,
 				047B4E8E281D8BE700D81202 /* PinAnnotation.swift */,
 				B4198DEE281A38A8001D56EA /* PopUpViewController.swift */,
@@ -487,6 +490,7 @@
 				B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */,
 				04D28F7627F894C100E64F10 /* AppDelegate.swift in Sources */,
 				04D28F7827F894C100E64F10 /* SceneDelegate.swift in Sources */,
+				B45F2F7D281D9FB300C7DD4B /* DetailViewController.swift in Sources */,
 				B488A0D42810DD9A00F7F1FC /* RestaurantTableViewCell.swift in Sources */,
 				04C611AD27F8B7DF005CDC54 /* MapViewController.swift in Sources */,
 			);

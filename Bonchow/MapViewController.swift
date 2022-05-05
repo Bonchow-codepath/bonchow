@@ -19,11 +19,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var userLocation: CLLocation!
     
-    
-    
-    
-    
-    
     var a = 0.0
     var b = 0.0
     
@@ -84,29 +79,37 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 return
             }
             self.restaurantsArray = restaurants
-            print(self.restaurantsArray)
+            //print(self.restaurantsArray)
             for restaurant in self.restaurantsArray {
                 
-//                let marker = MKPointAnnotation()
+//              let marker = MKPointAnnotation()
                 let resTitle = restaurant["name"] as! String
                 let resType = restaurant["categories"] as! [[String:Any?]]
                 let coordinates = restaurant["coordinates"] as! NSDictionary
                 let latitude = coordinates["latitude"] as! CLLocationDegrees
                 let longitude = coordinates["longitude"] as! CLLocationDegrees
-                
+                let resID = restaurant["id"] as! String
                 
                 let pinAnnotation = PinAnnotation()
-                pinAnnotation.setCoordinate(newCoordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
                 pinAnnotation.title = resTitle
+                pinAnnotation.id = resID
+                pinAnnotation.restaurant = restaurant
+//                print("line94")
+//                print(pinAnnotation.restaurant)
+//                print("line96")
+                pinAnnotation.setCoordinate(newCoordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+                pinAnnotation.name = resTitle
                 pinAnnotation.subtitle = ""
                 for type in resType{
                     let kind = type["title"] as! String
                     pinAnnotation.subtitle! += " "
                     pinAnnotation.subtitle! += kind
                 }
+                self.mapView.addAnnotation(pinAnnotation) // add with title=name
+                //pinAnnotation.title = resTitle
+                self.pins2.append(pinAnnotation) // append with title=id
                 
-                self.pins2.append(pinAnnotation)
-                self.mapView.addAnnotation(pinAnnotation)
+                
                 
                 //                Set markers
 //                marker.coordinate.latitude = latitude
@@ -131,7 +134,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //            print("Function called!")
             if annotation is PinAnnotation {
                 let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
-
+                
                 pinAnnotationView.pinTintColor = .purple
                 pinAnnotationView.isDraggable = true
                 pinAnnotationView.canShowCallout = true
@@ -150,16 +153,34 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
             return nil
     }
+    
+    
 
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             if let annotation = view.annotation as? PinAnnotation {
-                print(view.annotation?.title!)
+                //print(view.annotation?.title) // actual title
+                for pin in pins2 {
+                    if (pin.title == view.annotation?.title){
+                        //print(pin.restaurant)
+                        performSegue(withIdentifier: "detailSegue", sender: pin.restaurant)
+                        
+                    }
+                }
             }
-        
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if (segue.identifier == "detailSegue") {
+          let detailViewController = segue.destination as! DetailViewController
+          let object = sender as! [String: Any?]
+//           print("line177 sender")
+//           print(sender!)
+//           print("line179 sender")
+           detailViewController.restaurant = sender as! [String : Any]
+           //detailViewController.restaurant = sender as! [String : Any]
+       }
+    }
 
 
     
