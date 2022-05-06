@@ -135,7 +135,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if annotation is PinAnnotation {
                 let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
                 
-                pinAnnotationView.pinTintColor = .purple
+                pinAnnotationView.pinTintColor = UIColor(red: (253/255.0), green: (119/255.0), blue: (0/255.0), alpha: 1.0)
                 pinAnnotationView.isDraggable = true
                 pinAnnotationView.canShowCallout = true
                 pinAnnotationView.animatesDrop = true
@@ -143,8 +143,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 let startSessionButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
                 startSessionButton.frame.size.width = 44
                 startSessionButton.frame.size.height = 44
-                startSessionButton.backgroundColor = UIColor.green
-                startSessionButton.setImage(UIImage(named: "add"), for: [])
+//                startSessionButton.backgroundColor = UIColor.purple
+                startSessionButton.setImage(UIImage(systemName: "plus"), for: [])
   
                 pinAnnotationView.rightCalloutAccessoryView = startSessionButton
 
@@ -155,7 +155,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-
+//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        UITapGestureRecognizer tapGesture_ = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(calloutTapped:)];
+//            [view addGestureRecognizer:tapGesture];
+//
+//        let tapGesture : UITapGestureRecognizer = init
+//
+////        [theAnnotationView addGestureRecognizer:tapGesture];
+////        [tapGesture release];
+//    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             if let annotation = view.annotation as? PinAnnotation {

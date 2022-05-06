@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040EC3252825B0F6004A91AD /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EC3242825B0F6004A91AD /* SessionViewController.swift */; };
 		041723AA27F8A4B200C4F541 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723A927F8A4B200C4F541 /* SetupViewController.swift */; };
 		041723AC27F8A7F700C4F541 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723AB27F8A7F700C4F541 /* RegisterViewController.swift */; };
 		041723AE27F8A82E00C4F541 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041723AD27F8A82E00C4F541 /* LoginViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040EC3242825B0F6004A91AD /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		041723A927F8A4B200C4F541 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		041723AB27F8A7F700C4F541 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		041723AD27F8A82E00C4F541 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				041723AD27F8A82E00C4F541 /* LoginViewController.swift */,
 				B4198DE9281A0A96001D56EA /* LocationManager.swift */,
 				04C611AC27F8B7DF005CDC54 /* MapViewController.swift */,
+				040EC3242825B0F6004A91AD /* SessionViewController.swift */,
 			);
 			path = Bonchow;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				047B4E8F281D8BE700D81202 /* PinAnnotation.swift in Sources */,
 				041723AC27F8A7F700C4F541 /* RegisterViewController.swift in Sources */,
 				04D28F7A27F894C100E64F10 /* ViewController.swift in Sources */,
+				040EC3252825B0F6004A91AD /* SessionViewController.swift in Sources */,
 				B4198DEF281A38A8001D56EA /* PopUpViewController.swift in Sources */,
 				04D28F7627F894C100E64F10 /* AppDelegate.swift in Sources */,
 				04D28F7827F894C100E64F10 /* SceneDelegate.swift in Sources */,
