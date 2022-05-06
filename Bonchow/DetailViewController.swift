@@ -18,9 +18,7 @@ class DetailViewController: UIViewController {
     var latitude: Double!
     var longitude: Double!
     
-    
     var restaurant: [String:Any]!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +34,45 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func confirmGroup(_ sender: Any) {
+        
+        var query = PFQuery(className:"Restaurants")
+        query.whereKey("name", equalTo: resName.text)
+        query.findObjectsInBackground (block: { (objects: [PFObject]?, error: Error?) in
+            let noGroup = objects!.isEmpty as Bool
+            var restaurant = PFObject(className:"Restaurants")
+            if (noGroup) {
+                //print(objects)
+                restaurant["name"] = self.resName.text
+                restaurant.add(PFUser.current(), forKey: "owners")
+                restaurant.saveInBackground {
+                    (success: Bool, error: Error?) in
+                    if (success) {
+                        print("group created")
+                    } else {
+                        print("group created fail")
+                    }
+                }
+            } else {
+                restaurant = objects![0]
+                restaurant.add(PFUser.current(), forKey: "owners")
+                restaurant.saveInBackground {
+                    (success: Bool, error: Error?) in
+                    if (success) {
+                        print("group joined")
+                    } else {
+                        print("group joined fail")
+                    }
+                }
+            }
+        }
+        )
+        
+//        let restaurant = PFObject(className:"Restaurants")
+//        restaurant["name"] = resName
+//        restaurant["guests"] = PFUser.current()
+//
+//        PFUser.current()?.add(restaurant, forKey: "restaurant")
+
         
     }
     
