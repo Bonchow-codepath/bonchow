@@ -66,8 +66,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
                 self.sessionActionButton.setTitle("Start Session", for: .normal)
                 
                 self.sessionStatusLabel.text = "No Active Sessions"
-                
-        
                 }
             else {
                 self.sessionActionButton.setTitle("Join Session", for: .normal)
@@ -76,7 +74,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         )
-        
     }
     
     
@@ -110,6 +107,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
                     (success: Bool, error: Error?) in
                     if (success) {
                         print("group joined")
+
                         self.performSegue(withIdentifier: "sessionSegue", sender: self.restaurant)
                     } else {
                         print("group joined fail")
@@ -156,7 +154,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
 //           print(sender!)
 //           print("line179 sender")
            sessionViewController.restaurant = sender as! [String : Any]
-           //detailViewController.restaurant = sender as! [String : Any]
        }
     }
     

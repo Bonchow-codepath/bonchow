@@ -8,18 +8,30 @@ import UIKit
 import MapKit
 import Parse
 
-class SessionViewController: UIViewController {
+class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var cardView: UIView!
     
     @IBOutlet weak var resName: UILabel!
     @IBOutlet weak var resAddress: UILabel!
+    @IBOutlet weak var ownersTableView: UITableView!
     
     var latitude: Double!
     var longitude: Double!
     var restaurant: [String:Any]!
     
+    var owners:[String] = ["Augh","Yvonne"]
+    
     override func viewDidLoad() {
+        
+//        var query = PFQuery(className:"Restaurants")
+//        query.whereKey("name", equalTo: resName.text)
+//        query.findObjectsInBackground (block: { (objects: [PFObject]?, error: Error?) in
+//            self.owners = objects![0]["owners"] as! [PFUser]
+//        })
+        
         super.viewDidLoad()
+        
         cardView.layer.cornerRadius = 8
         
         //        Load Restaurant Details
@@ -34,6 +46,47 @@ class SessionViewController: UIViewController {
         
         
         //        Load Member Data
+        ownersTableView.dataSource = self
+        ownersTableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.owners.count
+    
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("label")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerCell") as! OwnerCell
+        
+//        var query = PFQuery(className:"Restaurants")
+//        query.whereKey("name", equalTo: resName.text)
+//        query.findObjectsInBackground (block: { (objects: [PFObject]?, error: Error?) in
+//            var owners = objects![0]["owners"] as! [PFUser]
+//            owners[indexPath.row].fetchInBackground { (object, error) in
+//                if error == nil {
+//                    cell.ownerLabel.text = object?["pseudonym"] as! String
+//                } else {
+//                    print("failed")
+//                }
+//            }
+//            print(cell.ownerLabel.text)
+//        })
+//
+        //cell.ownerLabel.text = indexPath.row as! String
+        
+//        self.owners[indexPath.row].fetchInBackground { (object, error) in
+//        if error == nil {
+//            cell.ownerLabel.text = object?["pseudonym"] as! String
+//        } else {
+//            print("failed")
+//                }
+//        }
+            
+        cell.ownerLabel.text = owners[indexPath.row]
+    
+        return cell
+        
     }
     
     @IBAction func onLeaveSession(_ sender: Any) {
