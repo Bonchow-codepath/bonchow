@@ -333,7 +333,6 @@ than recovering your account. Your information is secure and not shared with any
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="confirmGroup:" destination="GfX-Wg-SXR" eventType="touchUpInside" id="dra-Xf-dwc"/>
-                                    <segue destination="NbV-Z4-02L" kind="show" id="q41-sk-Cm8"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVz-C1-Lml">
@@ -373,6 +372,7 @@ than recovering your account. Your information is secure and not shared with any
                         <outlet property="resName" destination="tTo-lD-Xhe" id="1VG-sG-kLf"/>
                         <outlet property="sessionActionButton" destination="tvI-qU-oiq" id="j7F-OX-jll"/>
                         <outlet property="sessionStatusLabel" destination="1eC-YZ-Xvx" id="zFX-ds-yUV"/>
+                        <segue destination="NbV-Z4-02L" kind="presentation" identifier="sessionSegue" id="Vtf-sB-Wfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZv-i4-HQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -757,6 +757,7 @@ than recovering your account. Your information is secure and not shared with any
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Vtf-sB-Wfl"/>
         <segue reference="GpZ-Ko-0Is"/>
         <segue reference="vb6-G3-OhC"/>
     </inferredMetricsTieBreakers>

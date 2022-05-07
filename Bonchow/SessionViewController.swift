@@ -38,7 +38,33 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func onLeaveSession(_ sender: Any) {
-        
+        var query = PFQuery(className:"Restaurants")
+        query.whereKey("name", equalTo: resName.text)
+        query.findObjectsInBackground (block: { (objects: [PFObject]?, error: Error?) in
+            var owners = objects![0]["owners"] as! [PFUser]
+            //print(owners)
+            var removedOwners: [PFUser] = []
+            for owner in owners {
+                if (owner.objectId != PFUser.current()?.objectId){
+                    removedOwners.append(owner)
+                    print("added")
+                }
+            }
+            objects![0]["owners"] = removedOwners
+//            print("removedOwners")
+//            print(removedOwners)
+            objects![0].saveInBackground()
+//            print("owners")
+//            print(objects![0]["owners"])
+//            print("on leave")
+            let noOwners = removedOwners.isEmpty as Bool
+            print(noOwners)
+            if (noOwners){
+                objects![0].deleteEventually()
+                print("deleted")
+            }
+            
+        })
     }
     
     @IBAction func getDirections(_ sender: Any) {
