@@ -36,23 +36,6 @@ A mobile app that allows user to form and find dining group in local restaurants
 * Chat with people from previous dining group
 * Add people to friend list
 
-### Navigation
-
-**Tab Navigation** (Tab to Screen)
-
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
-
-**Flow Navigation** (Screen to Screen)
-
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
-
 ## Wireframes
 <img src="Screen Shot 2022-03-30 at 2.25.59 PM.png" width=600 title='Wireframes'>
 
@@ -60,6 +43,6 @@ Here's a walkthrough of planned user stories:
 
 <img src='https://media.giphy.com/media/nE3Dle7rM7LSXTPqGG/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-![](http://damien.pobel.fr/images/youtube-video-github.gif)
+![](https://www.youtube.com/watch?v=USoiB2K0Dlo)
 
-See also [Embed a Youtube video in Github markdown](http://damien.pobel.fr/post/youtube-video-github/)
+See also [Youtube video link](https://www.youtube.com/watch?v=USoiB2K0Dlo)
