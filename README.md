@@ -57,4 +57,9 @@ A mobile app that allows user to form and find dining group in local restaurants
 <img src="Screen Shot 2022-03-30 at 2.25.59 PM.png" width=600 title='Wireframes'>
 
 Here's a walkthrough of planned user stories:
+
 <img src='https://media.giphy.com/media/nE3Dle7rM7LSXTPqGG/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+![](http://damien.pobel.fr/images/youtube-video-github.gif)
+
+See also [Embed a Youtube video in Github markdown](http://damien.pobel.fr/post/youtube-video-github/)
