@@ -43,6 +43,4 @@ Here's a walkthrough of planned user stories:
 
 <img src='https://media.giphy.com/media/nE3Dle7rM7LSXTPqGG/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-https://www.youtube.com/watch?v=USoiB2K0Dlo
-
-See also [Youtube video link](https://www.youtube.com/watch?v=USoiB2K0Dlo)
+See also [Final Demo Youtube Video Link](https://www.youtube.com/watch?v=USoiB2K0Dlo)
